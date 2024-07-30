@@ -20,25 +20,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class WebDriverUtility extends JavaUtility 
 {
-	public WebDriver openBrowser(String browser) 
-	{
-		WebDriver driver=null;
-		switch(browser)
-		 {
-		 case "Chrome":
-			 driver=new ChromeDriver();
-			 break;
-		 case "Firefox":
-			 driver=new FirefoxDriver();
-			 break;
-		 case "Edge":
-			 driver=new EdgeDriver();
-			 break;
-		default:
-			driver=new ChromeDriver();
-		 }
-		return driver;
-	}
+WebDriver driver= new ChromeDriver();
 	public void waitForPageLoad(WebDriver driver) 
 	{
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
